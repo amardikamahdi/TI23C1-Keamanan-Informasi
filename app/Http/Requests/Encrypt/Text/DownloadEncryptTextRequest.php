@@ -4,7 +4,7 @@ namespace App\Http\Requests\Encrypt\Text;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreEncryptTextRequest extends FormRequest
+class DownloadEncryptTextRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -20,9 +20,7 @@ class StoreEncryptTextRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
             'key' => ['required', 'string', 'min:8'],
-            'text' => ['required', 'string'],
         ];
     }
 
@@ -32,9 +30,7 @@ class StoreEncryptTextRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'name' => 'Nama',
             'key' => 'Kunci Enkripsi',
-            'text' => 'Teks',
         ];
     }
 }

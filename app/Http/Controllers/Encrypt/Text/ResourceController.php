@@ -34,12 +34,10 @@ class ResourceController extends Controller
         DB::beginTransaction();
 
         try {
-            $key = config('app.key');
-
             $model = new EncryptText();
             $model->name = $request->name;
-            $model->text = Crypt::encrypt($request->text, $key);
-            $model->key = $key;
+            $model->text = Crypt::encrypt($request->text, $request->key);
+            $model->key = $request->key;
             $model->save();
 
             DB::commit();

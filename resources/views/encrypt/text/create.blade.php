@@ -29,8 +29,9 @@
                     </div>
                     <div class="mb-7">
                         <div class="d-inline-flex flex-center gap-2 mb-2">
-                            <label class="required fw-semibold fs-6">Password</label>
-                            <a role="button" data-bs-toggle="tooltip" data-bs-title="Harap simpan password ini, karena akan digunakan untuk proses dekripsi.">
+                            <label class="required fw-semibold fs-6">Kunci Enkripsi</label>
+                            <a role="button" data-bs-toggle="tooltip"
+                                data-bs-title="Harap simpan kunci enkripsi ini, karena akan digunakan untuk proses dekripsi.">
                                 <i class="ki-duotone ki-information-5 text-warning fs-2">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
@@ -38,7 +39,7 @@
                                 </i>
                             </a>
                         </div>
-                        <input type="text" name="password" class="form-control form-control-solid mb-3 mb-lg-0">
+                        <input type="text" name="key" class="form-control form-control-solid mb-3 mb-lg-0">
                     </div>
 
                     <div class="mb-7">

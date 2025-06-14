@@ -251,11 +251,12 @@
         defaultAjax($('.decrypt--text-create-form'));
 
         // Show modal decrypt
-        function showModalDecrypt({encryptId}) {
+        function showModalDecrypt({
+            decryptUrl
+        }) {
             var modal = $('#modal-decrypt');
-            modal.find('input[name="encrypt_id"]').val(encryptId);
+            modal.find('form').attr('action', decryptUrl);
             modal.modal('show');
         }
-
     </script>
 @endpush

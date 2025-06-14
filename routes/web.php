@@ -17,6 +17,6 @@ Route::prefix('encrypt')->name('encrypt.')->group(function () {
 
         Route::get('create', [EncryptTextResourceController::class, 'create'])->name('create');
         Route::post('', [EncryptTextResourceController::class, 'store'])->name('store');
-        Route::get('{encryptText}', EncryptTextDownloadController::class)->name('download');
+        Route::post('{encryptText}', EncryptTextDownloadController::class)->name('download');
     });
 });
