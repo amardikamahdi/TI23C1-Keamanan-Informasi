@@ -82,6 +82,10 @@
     </div>
 @endsection
 
+@push('modals')
+    @include('encrypt.text.partials.modal-decrypt')
+@endpush
+
 @push('vendor-scripts')
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="{{ asset('assets/assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
@@ -89,6 +93,7 @@
 
 @push('custom-scripts')
     <script src="{{ asset('custom/js/default-datatable.js') }}"></script>
+    <script src="{{ asset('custom/js/default-ajax.js') }}"></script>
     <script>
         $('.home').addClass('active');
 
@@ -241,5 +246,16 @@
                 }
             });
         }
+
+        // Init modal decrypt submission
+        defaultAjax($('.decrypt--text-create-form'));
+
+        // Show modal decrypt
+        function showModalDecrypt({encryptId}) {
+            var modal = $('#modal-decrypt');
+            modal.find('input[name="encrypt_id"]').val(encryptId);
+            modal.modal('show');
+        }
+
     </script>
 @endpush

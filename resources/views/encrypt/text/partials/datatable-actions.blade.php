@@ -6,4 +6,13 @@
             <span class="path2"></span>
         </i>
     </a>
+    <div data-bs-toggle="tooltip" title="Dekripsi dengan Password">
+        <a class="btn btn-light-primary btn-icon" onclick="showModalDecrypt({'encryptId': {{ $encryptText->id }} })">
+            <i class="ki-duotone ki-shield-slash">
+                <span class="path1"></span>
+                <span class="path2"></span>
+                <span class="path3"></span>
+            </i>
+        </a>
+    </div>
 </div>
