@@ -54,6 +54,9 @@
         <i class="ki-duotone ki-arrow-up"><span class="path1"></span><span class="path2"></span></i>
     </div>
 
+    {{-- Stack Modals --}}
+    @stack('modals')
+
     <script>
         var hostUrl = "{{ asset('assets/assets') }}";
     </script>
